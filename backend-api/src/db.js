@@ -2,7 +2,7 @@
 const Database = require('better-sqlite3')
 const bcrypt = require('bcrypt')
 
-const db = new Database('./data.db')
+const db = new Database('data.db')
 
 try {
   // Create tables if they don't exist
