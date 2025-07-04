@@ -174,7 +174,3 @@ curl -X GET http://localhost:5000/api/contacts/enrich/test@example.com \
 - Implement lazy loading for components
 - Add API response compression
 - Implement database indexing optimization
-
-## License
-
-MIT License - see LICENSE file for details
