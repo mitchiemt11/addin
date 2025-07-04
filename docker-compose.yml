@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  frontend:
+    build: ./addin-ui
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    build: ./backend-api
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - JWT_SECRET=supersecretkey123
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
