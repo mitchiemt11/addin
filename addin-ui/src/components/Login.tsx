@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Login = ({ onLoginSuccess }: { onLoginSuccess: (token: string) => void }) => {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -21,9 +23,9 @@ const Login = ({ onLoginSuccess }: { onLoginSuccess: (token: string) => void }) 
         }
       })
       const token = response.data.token
-      console.log(token)
       localStorage.setItem('token', token)
       onLoginSuccess(token)
+      navigate('/')
     } catch (err) {
       setError('Invalid email or password')
     }
