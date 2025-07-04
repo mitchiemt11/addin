@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Login = ({ onLoginSuccess }: { onLoginSuccess: (token: string) => void }) => {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -21,9 +23,9 @@ const Login = ({ onLoginSuccess }: { onLoginSuccess: (token: string) => void }) 
         }
       })
       const token = response.data.token
-      console.log(token)
       localStorage.setItem('token', token)
       onLoginSuccess(token)
+      navigate('/')
     } catch (err) {
       setError('Invalid email or password')
     }
@@ -31,7 +33,11 @@ const Login = ({ onLoginSuccess }: { onLoginSuccess: (token: string) => void }) 
 
   return (
     <div className="max-w-md mx-auto mt-40 p-6 bg-white rounded-2xl shadow-xl">
-      <h2 className="text-xl font-bold mb-4">Login</h2>
+        <h1 className="text-4xl text-center font-bold mb-2">Outlook Addin</h1>
+        
+      <div className="text-center mb-8">
+        <h2 className="text-2xl text-center font-bold mb-2">Login</h2>
+      </div>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           className="w-full p-2 border border-gray-300 rounded"

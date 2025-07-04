@@ -1,19 +1,25 @@
 // src/App.tsx
 import { useState } from 'react'
-import Login from './components/Login'
-import ContactDetails from './components/ContactDetails'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import ContactDetails from './components/ContactDetails';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('token') || '')
 
   return (
-    <div className="bg-gray-100 min-h-screen">
-      {token ? (
-        <ContactDetails token={token} />
-      ) : (
-        <Login onLoginSuccess={setToken} />
-      )}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login onLoginSuccess={setToken} />} />
+        <Route path="/" element={
+          token ? (
+            <ContactDetails token={token} />
+          ) : (
+            <Login onLoginSuccess={setToken} />
+          )
+        } />
+      </Routes>
+    </Router>
   )
 }
 
