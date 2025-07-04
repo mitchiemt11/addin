@@ -6,7 +6,7 @@ type Contact = {
   full_name: string
   job_title: string
   department: string
-  phone: string
+  phone_number: string
 }
 
 const ContactDetails = ({ token }: { token: string }) => {
@@ -39,7 +39,7 @@ const ContactDetails = ({ token }: { token: string }) => {
         <li><strong>Name:</strong> {contact.full_name}</li>
         <li><strong>Job Title:</strong> {contact.job_title}</li>
         <li><strong>Department:</strong> {contact.department}</li>
-        <li><strong>Phone:</strong> {contact.phone}</li>
+        <li><strong>Phone:</strong> {contact.phone_number}</li>
       </ul>
     </div>
   ) : (
