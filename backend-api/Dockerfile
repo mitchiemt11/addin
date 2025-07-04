@@ -1,5 +1,5 @@
 
-FROM node:24
+FROM node:18
 WORKDIR /backend-api
 COPY . .
 RUN npm install
