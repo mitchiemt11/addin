@@ -19,9 +19,9 @@ try {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       email TEXT UNIQUE,
       full_name TEXT,
-      job_title TEXT,
       department TEXT,
-      phone TEXT
+      phone_number TEXT,
+      job_title TEXT
     )
   `).run()
 
