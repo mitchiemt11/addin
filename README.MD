@@ -43,8 +43,12 @@ The system allows users to:
    ```
 
 3. Access the application:
-   - Frontend: http://localhost:5173
    - Backend API: http://localhost:5000
+   - Frontend: 
+      - cd into addin-ui
+      - Run npm run dev in that folder. 
+      - Access the  site on http://localhost:5173
+ 
 
 ## Authentication Flow
 
@@ -116,16 +120,16 @@ curl -X GET http://localhost:5000/api/contacts/enrich/test@example.com \
 ## Development Guidelines
 
 1. Frontend:
-   - Use TypeScript for type safety
-   - Follow React best practices
-   - Maintain consistent styling with TailwindCSS
-   - Use React Router for navigation
+   - Uses TypeScript for type safety
+   - Follows React best practices
+   - Maintains consistent styling with TailwindCSS
+   - Uses React Router for navigation
 
 2. Backend:
-   - Follow REST API design principles
-   - Implement proper error handling
-   - Use middleware for common tasks
-   - Maintain clean database schema
+   - Follows REST API design principles
+   - Implements proper error handling
+   - Uses middleware for common tasks
+   - Maintains clean database schema
 
 ## Contributing
 
@@ -136,6 +140,7 @@ curl -X GET http://localhost:5000/api/contacts/enrich/test@example.com \
 5. Create a Pull Request
 
 ## Future Enhancements
+- _These are few things I will to enhance in the app given that it can be ongoing_:
 
 ### Testing
 - Add unit tests for React components using Jest and React Testing Library
