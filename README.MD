@@ -140,7 +140,7 @@ curl -X GET http://localhost:5000/api/contacts/enrich/test@example.com \
 5. Create a Pull Request
 
 ## Future Enhancements
-- _These are few things I will to enhance in the app given that it can be ongoing_:
+- _These are a few things I would like to enhance in the app, given that it may be ongoing_:
 
 ### Testing
 - Add unit tests for React components using Jest and React Testing Library
