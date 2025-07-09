@@ -43,9 +43,10 @@ The system allows users to:
    ```
 
 3. Access the application:
-   - Backend API: http://localhost:5000
+   - Backend API: http://localhost:4000
    - Frontend: 
       - cd into addin-ui
+      - Run npm install
       - Run npm run dev in that folder. 
       - Access the  site on http://localhost:5173
  
@@ -95,14 +96,14 @@ You can test the API endpoints using curl or Postman:
 
 1. Login endpoint:
 ```bash
-curl -X POST http://localhost:5000/api/auth/login \
+curl -X POST http://localhost:4000/api/auth/login \
 -H "Content-Type: application/json" \
 -d '{"email": "test@example.com", "password": "password123"}'
 ```
 
 2. Contact enrichment endpoint (requires valid token):
 ```bash
-curl -X GET http://localhost:5000/api/contacts/enrich/test@example.com \
+curl -X GET http://localhost:4000/api/contacts/enrich/test@example.com \
 -H "Authorization: Bearer <your-token>"
 ```
 

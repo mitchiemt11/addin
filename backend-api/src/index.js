@@ -22,7 +22,7 @@ app.use(express.json())
 app.use('/api', require('./auth'))
 app.use('/api', require('./contact'))
 
-const PORT = 5000
+const PORT = 4000
 app.listen(PORT, () => {
   console.log(`Backend API running on http://localhost:${PORT}`)
 })

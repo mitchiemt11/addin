@@ -26,7 +26,7 @@ const ContactDetails = ({ token }: { token: string }) => {
   useEffect(() => {
     const fetchContact = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/contact/${sampleEmail}`, {
+        const response = await axios.get(`http://localhost:4000/api/contact/${sampleEmail}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         setContact(response.data)

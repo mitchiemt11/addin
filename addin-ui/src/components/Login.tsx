@@ -12,7 +12,7 @@ const Login = ({ onLoginSuccess }: { onLoginSuccess: (token: string) => void }) 
     e.preventDefault()
     setError('')
     try {
-      const response = await axios.post('http://localhost:5000/api/login', {
+      const response = await axios.post('http://localhost:4000/api/login', {
         email,
         password
       }, {
